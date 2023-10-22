@@ -1,20 +1,37 @@
-GET http://localhost:3000/users
+GET http://localhost:5000/api/people
 
 
-###
-POST http://localhost:3000/users
+###post new person and return that new person
+POST http://localhost:5000/api/people
 Content-Type: application/json
 
 {
-    "username": "Bandile",
-    "password": "ndiledanxa"
+    "id": 5,
+    "name": "Mbali"
 }
 
-###
-POST http://localhost:3000/users/login
+###add new person and return a new list of people
+POST http://localhost:5000/api/people/postman
 Content-Type: application/json
 
 {
-    "username": "Bandile",
-    "password": "ndile danxa"
+    "id": 6,
+    "name": "Mbali"
+}
+
+###Update person details
+PUT http://localhost:5000/api/people/1
+Content-Type: application/json
+
+{
+    "id": 1,
+    "name": "Thulas Sweetie"
+}
+
+###Delete person
+DELETE http://localhost:5000/api/people/1
+Content-Type: application/json
+
+{
+   
 }
